@@ -1,0 +1,48 @@
+﻿@model matricula.Models.Alumno
+@{
+    ViewData["Title"] = "REGISTRO";
+}
+
+<div class="text-center">
+    <div class="container">
+    <div class="row">
+        <div class="col-4">
+            <form asp-controller="Alumno" asp-action="Create">
+                <div class="mb-3">
+                    <label asp-for="nombres" class="form-label">Nombres</label>
+                    <input asp-for="nombres" type="text" class="form-control">
+                </div>
+                 <div class="mb-3">
+                    <label asp-for="apellidos" class="form-label">Apellidos</label>
+                    <input asp-for="apellidos" type="text" class="form-control">
+                </div>
+                 <div class="mb-3">
+                    <label asp-for="fechanacimiento" class="form-label">Fecha de nNcimiento</label>
+                    <input asp-for="fechanacimiento" type="date" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="dni" class="form-label">DNI</label>
+                    <input asp-for="dni" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="genero" class="form-label">Genero</label>
+                    <input asp-for="genero" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for=""> Carrera</label>
+                    <select asp-for="carrera" class="form-label" name="select">
+                        <option value="value1">Administracion</option>
+                        <option value="value2">Arquitectura</option>
+                        <option value="value3">Ing. Sistemas</option>
+                    </select>
+                </div>
+
+
+                
+                <button type="submit" class="btn btn-success">Registro</button>
+            </form>
+            <h1>@ViewData["Message"]</h1>
+        </div>
+    </div>
+</div>
+</div>
